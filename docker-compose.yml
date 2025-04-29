@@ -6,8 +6,8 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./static:/static
-      - ./sertbot/www:/var/www/certbot
-  sertbot:
-    image: sertbot/sertbot
+      - ./certbot/www:/var/www/certbot
+  certbot:
+    image: certbot/certbot
     volumes:
-      - ./sertbot/www:/var/www/certbot
+      - ./certbot/www:/var/www/certbot
