@@ -1,0 +1,15 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: 200px 1fr 80px/1fr;
+}
+
+.navBar {
+  display: flex;
+  gap: 20px;
+  max-width: 300px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
