@@ -6,7 +6,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./static:/static
+      - ./react-project/dist:/usr/share/nginx/html
       - ./certbot/www:/var/www/certbot
       - ./certbot/data:/etc/letsencrypt
   certbot:
