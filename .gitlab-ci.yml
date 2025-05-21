@@ -1,0 +1,66 @@
+default:
+  tags:
+    - custom-runner
+
+stages:
+  - install
+  - build
+  - build_docker
+  - deploy
+
+Npm ci:
+  stage: install
+  image: node:18
+  script:
+    - cd react-project
+    - npm ci
+  cache:
+    policy: push #тк нам не нужно доставать кеш, а только отдать
+    key: ${CI_COMMIT_REF_SLUG}-modules
+    paths:
+      - "react-project/node_modules" #какую папку кешируем
+
+Build:
+  stage: build
+  image: node:18
+  script:
+    - cd react-project
+    - npm run build
+  cache:
+    - key: ${CI_COMMIT_REF_SLUG}-modules
+      policy: pull
+      paths:
+        - "react-project/node_modules"
+    - key: ${CI_COMMIT_REF_SLUG}-build
+      policy: push
+      paths:
+        - react-project/dist
+
+Build_docker:
+  stage: build_docker
+  services:
+    - docker:dind
+  when: manual
+  variables:
+    IMAGE_NAME: stasya1/react
+  script:
+    - docker login stasya1 -p ${DOCKER_PWD}
+    - docker build -f react-project.dockerfile -t ${IMAGE_NAME} .
+    - docker push ${IMAGE_NAME}
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-build
+    policy: pull
+    paths:
+      - react-project/dist
+
+Deploy:
+  stage: deploy
+  image: ringcentral/sshpass
+  when: manual # означает что только ручной запуск
+  script:
+    - sshpass ssh ${SSH_HOST} "
+      cd name-project-in-VPS &&
+      git pull &&
+      docker compose pull nginx &&
+      docker compose stop nginx &&
+      docker compose up -d nginx"
