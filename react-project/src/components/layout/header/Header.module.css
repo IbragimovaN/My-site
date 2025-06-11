@@ -1,0 +1,89 @@
+.header {
+  background-color: var(--bg-secondary);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar {
+  display: flex;
+  gap: 20px;
+  max-width: 300px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 18px;
+}
+.activeLink {
+  color: var(--accent-color) !important;
+  position: relative;
+}
+.activeLink:after {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0px;
+  height: 2px;
+  background-color: var(--accent-color);
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.activeLink:hover:after {
+  width: 50%;
+}
+
+.activeLink::before {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  width: 0px;
+  height: 2px;
+  background-color: var(--accent-color);
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.activeLink:hover::before {
+  width: 50%;
+}
+
+.link {
+  position: relative;
+  color: var(--text-primary);
+}
+
+.link::after {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0px;
+  height: 2px;
+  background-color: var(--text-primary);
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.link::before {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  width: 0px;
+  height: 2px;
+  background-color: var(--text-primary);
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.link:hover:after {
+  width: 50%;
+}
+
+.link:hover::before {
+  width: 50%;
+}
