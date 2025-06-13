@@ -1,10 +1,14 @@
-import styles from "./AboutPage.module.css";
-import photo from "../../assets/images/photo_5231385813273671112_y.jpg";
-import { Button } from "../../components";
+import styles from "./AboutSection.module.css";
+import photo from "../../../../assets/images/photo_5231385813273671112_y.jpg";
+import { Button } from "../../..";
 
-export const AboutPage = () => {
+interface AboutSectionProp {
+  id: string;
+}
+
+export const AboutSection = ({ id }: AboutSectionProp) => {
   return (
-    <section className={styles.wrapper}>
+    <section id={id} className={styles.wrapper}>
       <div className={styles.aboutInfo}>
         <h3 className={styles.subTitle}>Frontend developer</h3>
         <h1 className={styles.title}>Привет, я Анастасия</h1>

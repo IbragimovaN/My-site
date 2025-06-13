@@ -1,0 +1,53 @@
+.tabs {
+  display: flex;
+  width: 100%;
+
+  overflow: hidden;
+  list-style: none;
+}
+
+.tab {
+  flex: 1; /* Растягиваем на всю доступную ширину */
+  text-align: center;
+  height: 2rem;
+
+  cursor: pointer;
+  border-bottom: 1px solid var(--accent-color);
+  transition: all 0.2s ease;
+  transform: skewX(-25deg);
+}
+.tab div {
+  transform: skewX(25deg);
+}
+.tab:last-child.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: var(--bg-secondary);
+  transform: skewX(25deg);
+  z-index: 1;
+}
+
+.active {
+  border-left: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  border-bottom: none; /* Убираем нижнюю границу у активного таба */
+  position: relative;
+  top: 1px; /* Сдвигаем вниз на 1px чтобы перекрыть границу контента */
+  background: var(
+    --bg-secondary
+  ); /* Чтобы перекрыть нижнюю границу неактивных табов */
+}
+
+.content {
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+
+  min-height: 200px;
+  margin-top: -1px; /* Поднимаем на 1px для соединения с активным табом */
+}

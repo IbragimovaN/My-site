@@ -1,29 +1,45 @@
-import { NavLink } from "react-router";
 import styles from "./Header.module.css";
 import { ThemeToggle } from "../../ui";
-
-export const isActiveLink = ({ isActive }) =>
-  isActive ? styles.activeLink : styles.link;
+import { useActiveSection } from "../../../hooks/useActiveSection";
 
 export const Header = () => {
+  const activeSection = useActiveSection();
   return (
     <header className={styles.header}>
-      <nav className={styles.navBar}>
-        <NavLink to="/" className={isActiveLink}>
-          about
-        </NavLink>
-        <NavLink to="/skills" className={isActiveLink}>
-          skills
-        </NavLink>
-        <NavLink to="/experience" className={isActiveLink}>
-          experience
-        </NavLink>
-        <NavLink to="/portfolio" className={isActiveLink}>
-          portfolio
-        </NavLink>
-        <NavLink to="/contacts" className={isActiveLink}>
-          contacts
-        </NavLink>
+      <nav>
+        <ul className={styles.navBar}>
+          <li
+            className={activeSection === "about" ? styles.active : styles.link}
+          >
+            <a href="#about">Обо мне</a>
+          </li>
+          <li
+            className={activeSection === "skills" ? styles.active : styles.link}
+          >
+            <a href="#skills">Навыки</a>
+          </li>
+          <li
+            className={
+              activeSection === "experience" ? styles.active : styles.link
+            }
+          >
+            <a href="#experience">Опыт</a>
+          </li>
+          <li
+            className={
+              activeSection === "portfolio" ? styles.active : styles.link
+            }
+          >
+            <a href="#portfolio">Портфолио</a>
+          </li>
+          <li
+            className={
+              activeSection === "contacts" ? styles.active : styles.link
+            }
+          >
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
       </nav>
       <ThemeToggle />
     </header>

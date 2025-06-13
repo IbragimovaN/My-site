@@ -1,0 +1,9 @@
+.skillsTab {
+  transform: skewX(-25deg);
+  div {
+    transform: skewX(25deg);
+  }
+}
+.skillsTab div {
+  transform: skewX(25deg);
+}

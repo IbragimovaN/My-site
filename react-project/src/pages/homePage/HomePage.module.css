@@ -1,8 +1,0 @@
-.app {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template: 80px 1fr 80px/1fr;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-}

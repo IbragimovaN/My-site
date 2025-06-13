@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background-color: var(--bg-secondary);
   height: 80px;
   display: flex;
@@ -9,18 +14,18 @@
 .navBar {
   display: flex;
   gap: 20px;
-  max-width: 300px;
+  max-width: 500px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
   font-size: 18px;
 }
-.activeLink {
+.active {
   color: var(--accent-color) !important;
   position: relative;
 }
-.activeLink:after {
+.active:after {
   display: block;
   position: absolute;
   bottom: -5px;
@@ -31,11 +36,11 @@
   content: "";
   transition: width 0.3s ease-out;
 }
-.activeLink:hover:after {
+.active:hover:after {
   width: 50%;
 }
 
-.activeLink::before {
+.active::before {
   display: block;
   position: absolute;
   bottom: -5px;
@@ -47,7 +52,7 @@
   transition: width 0.3s ease-out;
 }
 
-.activeLink:hover::before {
+.active:hover::before {
   width: 50%;
 }
 
