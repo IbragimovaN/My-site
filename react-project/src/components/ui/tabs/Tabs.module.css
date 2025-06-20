@@ -1,53 +1,80 @@
+.tabsWrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
 .tabs {
   display: flex;
   width: 100%;
-
-  overflow: hidden;
-  list-style: none;
+  background: var(--bg-elements-1);
+  position: relative;
 }
 
 .tab {
-  flex: 1; /* Растягиваем на всю доступную ширину */
+  flex: 1;
   text-align: center;
-  height: 2rem;
-
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  border-bottom: 1px solid var(--accent-color);
-  transition: all 0.2s ease;
-  transform: skewX(-25deg);
-}
-.tab div {
-  transform: skewX(25deg);
-}
-.tab:last-child.active::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 15px;
-  height: 100%;
-  background: var(--bg-secondary);
-  transform: skewX(25deg);
+  position: relative;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-duration) ease;
   z-index: 1;
 }
 
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background: var(--bg-elements-2);
+}
+
+.tab:last-child::after {
+  display: none;
+}
+
 .active {
-  border-left: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
-  border-bottom: none; /* Убираем нижнюю границу у активного таба */
-  position: relative;
-  top: 1px; /* Сдвигаем вниз на 1px чтобы перекрыть границу контента */
-  background: var(
-    --bg-secondary
-  ); /* Чтобы перекрыть нижнюю границу неактивных табов */
+  color: var(--accent-color);
+  background: var(--bg-secondary);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 3px 3px 0 0;
 }
 
 .content {
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-
+  padding: 1.5rem;
+  background: var(--bg-secondary);
   min-height: 200px;
-  margin-top: -1px; /* Поднимаем на 1px для соединения с активным табом */
+  border-top: 1px solid var(--bg-elements-2);
+  animation: fadeIn var(--transition-duration) ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

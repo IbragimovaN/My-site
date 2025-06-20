@@ -3,7 +3,11 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+
+  padding-top: 80px;
+  min-height: 100vh;
+  padding: 80px 20px 40px;
+  gap: 40px;
 }
 
 .aboutInfo {
@@ -124,5 +128,70 @@
 @keyframes rotate-border {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px; /* Уменьшаем отступ сверху */
+    gap: 30px;
+  }
+
+  .aboutInfo {
+    max-width: 100%;
+    order: 2; /* Текст будет под фото */
+    text-align: center;
+  }
+
+  .photoBox {
+    width: min(300px, 80vw);
+    height: min(300px, 80vw);
+    order: 1; /* Фото будет сверху */
+  }
+
+  .photoWrapper {
+    width: min(280px, 75vw);
+    height: min(280px, 75vw);
+  }
+
+  .title {
+    font-size: 2.2rem; /* Уменьшаем размер заголовка */
+  }
+
+  .button {
+    align-self: center; /* Центрируем кнопку */
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .photoBox {
+    width: min(250px, 75vw);
+    height: min(250px, 75vw);
+  }
+
+  .photoWrapper {
+    width: min(230px, 70vw);
+    height: min(230px, 70vw);
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photoBox::after,
+  .photoBox::before {
+    animation: none;
+  }
+}
+@media (max-width: 768px) {
+  .aboutInfo {
+    padding: 0 15px; /* Боковые отступы для текста */
   }
 }

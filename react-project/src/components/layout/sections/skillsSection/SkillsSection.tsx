@@ -1,25 +1,15 @@
-import { Tabs } from "../../../ui";
-import styles from "./SkillsSection.module.css";
+import { SECTIONS_DATA, TAB_SKILLS } from "../../../../constants";
+import { Tabs, SectionTitle } from "../../../ui";
 
 interface SkillsSectionProp {
   id: string;
 }
-//-------------убрать отсюда потом!
-export interface TabType {
-  label: string;
-  content: React.ReactNode;
-}
-export const typesTabSkills: TabType[] = [
-  { label: "soft skills", content: <div>content soft</div> },
-  { label: "hard skills", content: <div>content hard</div> },
-];
-
-//------------------------------------------------------------
 
 export const SkillsSection = ({ id }: SkillsSectionProp) => {
   return (
     <section id={id}>
-      <Tabs types={typesTabSkills} />
+      <SectionTitle title={SECTIONS_DATA.skills.sectionTitle} />
+      <Tabs types={TAB_SKILLS} />
     </section>
   );
 };

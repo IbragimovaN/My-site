@@ -1,16 +1,28 @@
-import htmlIcon from "./assets/images/skills/html5.svg";
-import cssIcon from "./assets/images/skills/css3.svg";
+import HtmlIcon from "../assets/icons/skills/html.svg?react";
+import CssIcon from "../assets/icons/skills/css.svg?react";
+import JsIcon from "../assets/icons/skills/js.svg?react";
+import MongoIcon from "../assets/icons/skills/mongo.db.svg?react";
+import NodeIcon from "../assets/icons/skills/node.js.svg?react";
+import ReactIcon from "../assets/icons/skills/react.svg?react";
+import TsIcon from "../assets/icons/skills/typescript.svg?react";
+import NextIcon from "../assets/icons/skills/next.svg?react";
+import GitIcon from "../assets/icons/skills/git.svg?react";
+import ReduxIcon from "../assets/icons/skills/redux.svg?react";
+import MobXIcon from "../assets/icons/skills/mobx.svg?react";
+import WebpackIcon from "../assets/icons/skills/webpack.svg?react";
+import ExpressIcon from "../assets/icons/skills/express.svg?react";
+import DockerIcon from "../assets/icons/skills/docker.svg?react";
 
-export const softSkills = [
+export const SOFT_SKILLS = [
   {
-    skillName: "Командный игрок",
+    name: "Командный игрок",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#000000"
         className="size-6"
       >
         <path
@@ -22,14 +34,14 @@ export const softSkills = [
     ),
   },
   {
-    skillName: "Умение планировать",
+    name: "Умение планировать",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#000000"
         className="size-6"
       >
         <path
@@ -41,14 +53,14 @@ export const softSkills = [
     ),
   },
   {
-    skillName: "Обучаемость",
+    name: "Обучаемость",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#000000"
         className="size-6"
       >
         <path
@@ -60,13 +72,61 @@ export const softSkills = [
     ),
   },
 ];
-export const hardSkills = [
+export const HARD_SKILLS = [
   {
-    skillName: "HTML",
-    icon: "",
+    name: "HTML",
+    icon: <HtmlIcon />,
   },
   {
-    skillName: "CSS",
-    icon: "",
+    name: "CSS",
+    icon: <CssIcon />,
+  },
+  {
+    name: "JS",
+    icon: <JsIcon />,
+  },
+  {
+    name: "React",
+    icon: <ReactIcon />,
+  },
+  {
+    name: "NodeJS",
+    icon: <NodeIcon />,
+  },
+  {
+    name: "MongoDB",
+    icon: <MongoIcon />,
+  },
+  {
+    name: "TS",
+    icon: <TsIcon />,
+  },
+  {
+    name: "NextJS",
+    icon: <NextIcon />,
+  },
+  {
+    name: "Git",
+    icon: <GitIcon />,
+  },
+  {
+    name: "Redux, RTK",
+    icon: <ReduxIcon />,
+  },
+  {
+    name: "MobX",
+    icon: <MobXIcon />,
+  },
+  {
+    name: "Webpack",
+    icon: <WebpackIcon />,
+  },
+  {
+    name: "Express",
+    icon: <ExpressIcon />,
+  },
+  {
+    name: "Docker",
+    icon: <DockerIcon />,
   },
 ];
