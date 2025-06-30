@@ -1,5 +1,10 @@
 import styles from "./App.module.css";
-import { AboutSection, Header, SkillsSection } from "./components";
+import {
+  AboutSection,
+  Header,
+  SkillsSection,
+  ExperienceSection,
+} from "./components";
 import { ThemeProviderComponent } from "./context/ThemeContext";
 export const App = () => {
   return (
@@ -8,7 +13,7 @@ export const App = () => {
         <Header />
         <AboutSection id="about" />
         <SkillsSection id="skills" />
-        {/* <ExperienceSection id="experience" /> */}
+        <ExperienceSection id="experience" />
         {/* <PortfolioSection id="portfolio" />
         <ContactsSection id="contacts" /> */}
         <footer>footer</footer>

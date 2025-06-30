@@ -1,9 +1,4 @@
-.skillsTab {
-  transform: skewX(-25deg);
-  div {
-    transform: skewX(25deg);
-  }
-}
-.skillsTab div {
-  transform: skewX(25deg);
+.wrapper {
+  min-height: 100vh;
+  padding-top: 80px;
 }

@@ -2,11 +2,11 @@ import styles from "./AboutSection.module.css";
 import photo from "../../../../assets/images/photo_5231385813273671112_y.jpg";
 import { Button } from "../../..";
 
-interface AboutSectionProp {
+interface SectionProp {
   id: string;
 }
 
-export const AboutSection = ({ id }: AboutSectionProp) => {
+export const AboutSection = ({ id }: SectionProp) => {
   return (
     <section id={id} className={styles.wrapper}>
       <div className={styles.aboutInfo}>

@@ -1,7 +1,6 @@
 export type SectionId =
   | "about"
   | "skills"
-  | "educations"
   | "experience"
   | "portfolio"
   | "contacts";
@@ -23,16 +22,12 @@ export const SECTIONS_DATA: Record<SectionId, SectionData> = {
     sectionTitle: "В мои навыки входят следующие технологии",
     order: 2,
   },
-  educations: {
-    navTitle: "Образование",
+  experience: {
+    navTitle: "Образование и опыт",
     sectionTitle: "Образование",
     order: 3,
   },
-  experience: {
-    navTitle: "Опыт",
-    sectionTitle: "Мой опыт в IT и не только",
-    order: 4,
-  },
+
   portfolio: {
     navTitle: "Портфолио",
     sectionTitle: "Портфолио",
