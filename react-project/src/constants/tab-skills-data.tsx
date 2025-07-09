@@ -1,4 +1,4 @@
-import { HARD_SKILLS, SOFT_SKILLS } from "./skills";
+import { HARD_SKILLS, SOFT_SKILLS } from "./skills-data";
 import { SkillCardsContainer } from "../components/layout/sections/skillsSection/skillsCardsContainer/SkillsCardContainer";
 
 export interface TabSkills {

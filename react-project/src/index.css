@@ -7,6 +7,7 @@
 }
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -23,8 +24,10 @@ html {
   --bg-elements-2: #747373;
   --text-primary: #f5f5f5;
   --text-secondary: #bdbdbd;
-  --accent-color: #19fd11;
+  --accent-color: #0be486;
   --shadow-color: rgba(13, 157, 47, 0.4);
+  --filter-wave-color: brightness(0) saturate(100%) invert(83%) sepia(93%)
+    saturate(1844%) hue-rotate(74deg) brightness(105%) contrast(98%);
   --text-primary-size: 1rem;
   --text-primary-weight: 400;
 
@@ -39,6 +42,8 @@ html {
   --icon-color: #000;
   --text-secondary: #757575;
   --accent-color: #3f51b5;
+  --filter-wave-color: brightness(0) saturate(100%) invert(48%) sepia(97%)
+    saturate(391%) hue-rotate(197deg) brightness(87%) contrast(103%);
   --shadow-color: rgba(26, 43, 227, 0.4);
   --bg-elements-1: #c6c6de;
   --bg-elements-2: #7c89a9;
@@ -55,4 +60,9 @@ img {
 ul li {
   list-style-type: none;
   color: inherit;
+}
+
+.sectionsWrapper {
+  min-height: 100vh;
+  padding: 80px 20px 0;
 }

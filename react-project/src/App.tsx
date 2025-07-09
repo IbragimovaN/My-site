@@ -4,6 +4,9 @@ import {
   Header,
   SkillsSection,
   ExperienceSection,
+  PortfolioSection,
+  ContactsSection,
+  Footer,
 } from "./components";
 import { ThemeProviderComponent } from "./context/ThemeContext";
 export const App = () => {
@@ -14,10 +17,10 @@ export const App = () => {
         <AboutSection id="about" />
         <SkillsSection id="skills" />
         <ExperienceSection id="experience" />
-        {/* <PortfolioSection id="portfolio" />
-        <ContactsSection id="contacts" /> */}
-        <footer>footer</footer>
+        <PortfolioSection id="portfolio" />
+        <ContactsSection id="contacts" />
       </main>
+      <Footer />
     </ThemeProviderComponent>
   );
 };

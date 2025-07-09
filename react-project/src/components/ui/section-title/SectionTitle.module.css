@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: center;
   margin: 2em 0 2em 0;
+  position: sticky;
+  top: 0;
 }
 .subtitle {
   color: var(--text-primary);
@@ -10,4 +12,15 @@
 .title {
   color: var(--accent-color);
   font-size: 2em;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 2px;
+  background: var(--accent-color);
 }

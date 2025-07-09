@@ -14,7 +14,7 @@ export interface SectionData {
 export const SECTIONS_DATA: Record<SectionId, SectionData> = {
   about: {
     navTitle: "Обо мне",
-    sectionTitle: "Привет, я [Ваше Имя]",
+    sectionTitle: "",
     order: 1,
   },
   skills: {
@@ -24,7 +24,7 @@ export const SECTIONS_DATA: Record<SectionId, SectionData> = {
   },
   experience: {
     navTitle: "Образование и опыт",
-    sectionTitle: "Образование",
+    sectionTitle: "Образование и опыт",
     order: 3,
   },
 

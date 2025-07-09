@@ -1,0 +1,153 @@
+.wrapper {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.info {
+  flex: 1;
+  padding-top: 40px;
+}
+
+.contactsTitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+}
+
+.contactContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.svgIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--accent-color);
+}
+
+.svgIcon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.contactTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contactLink {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-duration);
+}
+
+.contactLink:hover {
+  color: var(--accent-color);
+}
+
+/* .wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 20vh;
+  background: url(../../../../assets/images/wave.png);
+  background-size: 100vw 20vh;
+}
+.wave1 {
+  bottom: 0;
+  z-index: 15;
+  opacity: 0.9;
+  animation: animate 40s linear infinite;
+  animation-delay: 0s;
+}
+.wave2 {
+  bottom: 10px;
+  z-index: 10;
+  opacity: 0.7;
+  animation: animate2 30s linear infinite;
+  animation-delay: -5s;
+}
+.wave3 {
+  bottom: 15px;
+  z-index: 5;
+  opacity: 0.4;
+  animation: animate 20s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave4 {
+  bottom: 20px;
+  z-index: 1;
+  opacity: 0.5;
+  animation: animate2 10s linear infinite;
+  animation-delay: -5s;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 100vw;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -100vw;
+  }
+} */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info {
+    padding-top: 0;
+  }
+
+  .contactContent {
+    gap: 15px;
+  }
+
+  .svgIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contactsTitle {
+    text-align: center;
+  }
+}
