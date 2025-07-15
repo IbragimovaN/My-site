@@ -25,7 +25,7 @@ export const FeedbackForm = () => {
           type="email"
           id="email"
           className={styles.formInput}
-          placeholder="your@email.com"
+          placeholder="Ваш email"
           required
         />
       </div>

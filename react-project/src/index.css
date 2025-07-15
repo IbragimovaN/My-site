@@ -15,8 +15,18 @@ html {
     scroll-behavior: auto;
   }
 }
+
+@font-face {
+  font-family: "Intro";
+  src: url("./assets/fonts/intro-bold.woff2") format("woff2"),
+    url("./assets/fonts/intro-bold.woff") format("woff");
+
+  font-style: normal;
+  font-weight: bold;
+}
 :root {
   --transition-duration: 0.3s;
+  --font-title: "Intro", sans-serif;
   --icon-color: #fff;
   --bg-primary: #121212;
   --bg-secondary: #1e1e1e;
@@ -30,8 +40,7 @@ html {
     saturate(1844%) hue-rotate(74deg) brightness(105%) contrast(98%);
   --text-primary-size: 1rem;
   --text-primary-weight: 400;
-
-  --text-secondary-size: 0.875rem;
+  --text-secondary-size: 0.8rem;
   --text-secondary-weight: 300;
 }
 
@@ -48,6 +57,7 @@ html {
   --bg-elements-1: #c6c6de;
   --bg-elements-2: #7c89a9;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -62,6 +72,10 @@ ul li {
   color: inherit;
 }
 
+input::placeholder,
+textarea::placeholder {
+  font-family: "Courier New", Courier, monospace;
+}
 .sectionsWrapper {
   min-height: 100vh;
   padding: 80px 20px 0;
