@@ -4,6 +4,15 @@ import { Button } from "../../..";
 import type { SectionProp } from "../types";
 
 export const AboutSection = ({ id }: SectionProp) => {
+  const handleContactClick = () => {
+    const contactsSection = document.getElementById("contacts");
+    if (contactsSection) {
+      contactsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <section id={id} className={`${styles.wrapper} sectionsWrapper`}>
       <div className={styles.aboutInfo}>
@@ -15,7 +24,7 @@ export const AboutSection = ({ id }: SectionProp) => {
           активно осваиваю JavaScript, React и экосистему фронтенда, применяя
           знания на практике в учебных и пет-проектах.
         </p>
-        <Button className={styles.button} onClick={() => console.log("ff")}>
+        <Button className={styles.button} onClick={handleContactClick}>
           Связаться со мной
         </Button>
       </div>
