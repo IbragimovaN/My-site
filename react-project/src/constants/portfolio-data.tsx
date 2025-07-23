@@ -4,6 +4,9 @@ import weatherImage from "@assets/images/porfolioScreens/weather.png";
 import rickMortyImage from "@assets/images/porfolioScreens/rick-morty.png";
 import contactsImage from "@assets/images/porfolioScreens/contacts.png";
 import pulseImage from "@assets/images/porfolioScreens/pulse.png";
+import todoImage from "@assets/images/porfolioScreens/todo.png";
+import notesImage from "@assets/images/porfolioScreens/notes.png";
+import eventsImage from "@assets/images/porfolioScreens/events.png";
 
 export interface PortfolioDataType {
   id: number;
@@ -48,5 +51,23 @@ export const PORTFOLIO_DATA: PortfolioDataType[] = [
     title: "Contacts",
     image: contactsImage,
     link: "https://github.com/IbragimovaN/Contacts/blob/main/README.md",
+  },
+  {
+    id: 7,
+    title: "Todos App",
+    image: todoImage,
+    link: "https://github.com/IbragimovaN/todosApp-with-tests/blob/main/README.md",
+  },
+  {
+    id: 8,
+    title: "Notes App",
+    image: notesImage,
+    link: "https://github.com/IbragimovaN/Notes-app2/blob/main/README.md",
+  },
+  {
+    id: 9,
+    title: "Events",
+    image: eventsImage,
+    link: "https://github.com/IbragimovaN/Events/blob/main/README.md",
   },
 ];
