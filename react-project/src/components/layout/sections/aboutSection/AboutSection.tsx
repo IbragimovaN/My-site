@@ -1,18 +1,10 @@
 import styles from "./AboutSection.module.css";
 import photo from "../../../../assets/images/photo_5231385813273671112_y.jpg";
-import { Button } from "../../..";
+import { ButtonLink } from "../../..";
 import type { SectionProp } from "../types";
+import GithubIcon from "../../../../assets/icons/github.svg?react";
 
 export const AboutSection = ({ id }: SectionProp) => {
-  const handleContactClick = () => {
-    const contactsSection = document.getElementById("contacts");
-    if (contactsSection) {
-      contactsSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
   return (
     <section id={id} className={`${styles.wrapper} sectionsWrapper`}>
       <div className={styles.aboutInfo}>
@@ -24,9 +16,17 @@ export const AboutSection = ({ id }: SectionProp) => {
           активно осваиваю JavaScript, React и экосистему фронтенда, применяя
           знания на практике в учебных и пет-проектах.
         </p>
-        <Button className={styles.button} onClick={handleContactClick}>
-          Связаться со мной
-        </Button>
+        <div className={styles.buttonsWrapper}>
+          <ButtonLink className={styles.button} href="#contacts">
+            Связаться со мной
+          </ButtonLink>
+          <ButtonLink
+            className={styles.buttonGithub}
+            href="https://github.com/IbragimovaN"
+          >
+            Мой гитхаб <GithubIcon />
+          </ButtonLink>
+        </div>
       </div>
       <div className={styles.photoBox}>
         {" "}
