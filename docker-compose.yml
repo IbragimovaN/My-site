@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: stasya1/react
+    image: nginx:alpine
     ports:
       - "80:80"
       - "443:443"
