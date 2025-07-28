@@ -13,3 +13,14 @@ services:
     volumes:
       - ./certbot/www:/var/www/certbot
       - ./certbot/data:/etc/letsencrypt
+  backend:
+    build:
+      context: .
+      dockerfile: server.dockerfile
+    env_file:
+      - ./server/.env # Загружает ВСЕ переменные из файла
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    depends_on:
+      - nginx

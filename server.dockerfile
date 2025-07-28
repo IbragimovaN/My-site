@@ -2,10 +2,10 @@ FROM node:18
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-RUN npm install
+COPY ./server .
 
-COPY . .
+RUN npm ci
 
-EXPOSE 3000
-CMD ["npm", "serve"]
+EXPOSE 3002
+
+CMD ["node", "server.js"]

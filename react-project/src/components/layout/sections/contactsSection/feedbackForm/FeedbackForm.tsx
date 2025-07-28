@@ -26,7 +26,7 @@ export const FeedbackForm = () => {
     const message = formData.get("message");
     console.log(name, email, message);
     try {
-      const res = await fetch("http://localhost:3002/contact", {
+      const res = await fetch("http://backend:3002/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
