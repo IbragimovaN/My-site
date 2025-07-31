@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "./Tabs.module.css";
-import type { TabType } from "../../layout";
+import type { TabSkills } from "../../../constants";
 
 interface TabsProp {
-  types: TabType[];
+  types: TabSkills[];
 }
 
 export const Tabs = ({ types }: TabsProp) => {

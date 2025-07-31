@@ -1,26 +1,20 @@
 services:
   nginx:
-    image: nginx:alpine
+    image: stasya1/my-site-frontend
+    build:
+      context: "react-project"
+      dockerfile: Dockerfile
     ports:
       - "80:80"
-      - "443:443"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./certbot/www:/var/www/certbot
-      - ./certbot/data:/etc/letsencrypt
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./certbot/www:/var/www/certbot
-      - ./certbot/data:/etc/letsencrypt
+
   backend:
+    image: stasya1/my-site-backend
     build:
-      context: .
-      dockerfile: server.dockerfile
+      context: "server"
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
     env_file:
-      - ./server/.env # Загружает ВСЕ переменные из файла
-    volumes:
-      - ./server:/app
-      - /app/node_modules
-    depends_on:
-      - nginx
+      - "server/.env"

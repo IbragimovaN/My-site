@@ -12,15 +12,12 @@ export const FeedbackForm = () => {
   const [state, submitAction, isPending] = useActionState<
     ActionState,
     FormData
-  >(handleSubmit, {
+  >((_, formData) => handleSubmit(formData), {
     success: null,
     error: null,
   });
 
-  async function handleSubmit(
-    prevState: ActionState,
-    formData: FormData
-  ): Promise<ActionState> {
+  async function handleSubmit(formData: FormData): Promise<ActionState> {
     const name = formData.get("name");
     const email = formData.get("email");
     const message = formData.get("message");

@@ -1,8 +1,6 @@
 FROM node:18
 
-WORKDIR /usr/src/app
-
-COPY ./server .
+COPY . .
 
 RUN npm ci
 
