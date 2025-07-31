@@ -7,7 +7,16 @@ export default defineConfig({
   plugins: [react(), svgr()],
   resolve: {
     alias: {
-      "@assets": path.resolve(__dirname, "./src/assets"),
+      "@": path.resolve(__dirname, "./src"),
+      "@assets": path.resolve(__dirname, "./src/assets"), // Явный алиас для assets
+    },
+  },
+  build: {
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name]-[hash][extname]",
+      },
     },
   },
 });
