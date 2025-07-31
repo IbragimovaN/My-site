@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ActionState } from "../FeedbackForm";
-import styles from "./infoOverlay.module.css";
+import styles from "./InfoOverlay.module.css";
 interface InfoOverlayProps {
   status: ActionState;
   isPending: boolean;
