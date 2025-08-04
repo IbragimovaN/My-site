@@ -17,7 +17,7 @@
 .formLabel {
   display: block;
   margin-bottom: 8px;
-  font-size: var(--text-secondary-size);
+  font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
@@ -30,7 +30,6 @@
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-size: var(--text-primary-size);
-  font-size: 14px;
   transition: border-color var(--transition-duration);
 }
 

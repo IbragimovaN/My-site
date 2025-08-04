@@ -49,7 +49,7 @@
 
 .name {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: var(--text-secondary-size);
   font-weight: 500;
   color: #111;
   text-align: center;

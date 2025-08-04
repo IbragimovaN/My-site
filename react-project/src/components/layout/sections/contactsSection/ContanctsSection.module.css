@@ -63,7 +63,7 @@
 }
 
 .contactLink {
-  font-size: 1rem;
+  font-size: var(--text-primary-size);
   color: var(--text-secondary);
   transition: color var(--transition-duration);
 }
