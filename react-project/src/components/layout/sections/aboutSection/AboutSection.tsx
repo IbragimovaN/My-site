@@ -23,6 +23,7 @@ export const AboutSection = ({ id }: SectionProp) => {
           <ButtonLink
             className={styles.buttonGithub}
             href="https://github.com/IbragimovaN"
+            target="_blank"
           >
             Мой гитхаб <GithubIcon />
           </ButtonLink>
