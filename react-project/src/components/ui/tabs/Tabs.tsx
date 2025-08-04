@@ -9,8 +9,7 @@ interface TabsProp {
 export const Tabs = ({ types }: TabsProp) => {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div className={styles.tabsWrapper}>
-      {" "}
+    <>
       <ul className={styles.tabs}>
         {types.map(({ label }, index) => (
           <li
@@ -25,6 +24,6 @@ export const Tabs = ({ types }: TabsProp) => {
         ))}
       </ul>
       <div className={styles.content}>{types[activeTab].content}</div>
-    </div>
+    </>
   );
 };
