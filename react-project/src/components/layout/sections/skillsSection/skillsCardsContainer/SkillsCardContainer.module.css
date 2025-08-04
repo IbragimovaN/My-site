@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   padding: 1rem 0;
-  gap: 2em;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
 }

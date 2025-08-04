@@ -8,13 +8,15 @@ import styles from "./PortfolioSection.module.css";
 export const PortfolioSection = ({ id }: SectionProp) => {
   return (
     <section id={id} className={`sectionsWrapper ${styles.wrapper}`}>
-      {" "}
-      <SectionTitle title={SECTIONS_DATA.portfolio.sectionTitle} />
-      <div className={styles.container}>
+      <div className={styles.overlay}>
         {" "}
-        {PORTFOLIO_DATA.reverse().map((item) => (
-          <PortfolioCard key={item.id} dataCard={item} />
-        ))}
+        <SectionTitle title={SECTIONS_DATA.portfolio.sectionTitle} />
+        <div className={styles.container}>
+          {" "}
+          {PORTFOLIO_DATA.reverse().map((item) => (
+            <PortfolioCard key={item.id} dataCard={item} />
+          ))}
+        </div>
       </div>
     </section>
   );

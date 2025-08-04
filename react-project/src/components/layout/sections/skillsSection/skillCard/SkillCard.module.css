@@ -49,11 +49,11 @@
 
 .name {
   margin: 0;
-  font-size: var(--text-secondary-size);
+  font-size: 0.9rem;
   font-weight: 500;
   color: #111;
   text-align: center;
-  white-space: nowrap;
+
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;

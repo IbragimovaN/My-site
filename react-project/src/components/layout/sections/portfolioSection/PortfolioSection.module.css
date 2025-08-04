@@ -1,5 +1,9 @@
 .wrapper {
+  padding-top: 0;
+}
+.overlay {
   background: var(--bg-secondary);
+  padding: 80px 20px 0 20px;
 }
 .container {
   display: flex;

@@ -1,13 +1,8 @@
-.tabsWrapper {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px var(--shadow-color);
-}
-
 .tabs {
   display: flex;
   width: 100%;
   background: var(--bg-elements-1);
+
   position: relative;
 }
 
