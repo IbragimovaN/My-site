@@ -63,6 +63,7 @@
   cursor: pointer;
   transition: all var(--transition-duration);
   width: 100%;
+  z-index: 1000;
 }
 
 .submitButton:hover {

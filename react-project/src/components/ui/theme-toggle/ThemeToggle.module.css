@@ -1,9 +1,12 @@
 .toggle {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
   background: none;
   color: var(--text-primary);
+  padding: 0;
+  width: 8rem;
 }
 
 .toggle:hover {

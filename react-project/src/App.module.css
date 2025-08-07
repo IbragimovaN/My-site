@@ -2,5 +2,10 @@
   min-height: 100vh;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  padding: 0 6em;
+  padding: 0 5rem;
+}
+@media (max-width: 1200px) {
+  .app {
+    padding: 0 0.2rem;
+  }
 }

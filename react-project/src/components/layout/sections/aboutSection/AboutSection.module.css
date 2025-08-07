@@ -36,8 +36,8 @@
   color: var(--text-secondary);
 }
 .photoBox {
-  width: min(420px, 85vw);
-  height: min(420px, 85vw);
+  width: min(450px, 85vw);
+  height: min(450px, 85vw);
   border-radius: 50%;
   position: relative;
   padding: 20px;
@@ -45,8 +45,8 @@
   background-color: var(--bg-primary);
 }
 .photoWrapper {
-  width: min(400px, 80vw);
-  height: min(400px, 80vw);
+  width: min(430px, 80vw);
+  height: min(430px, 80vw);
   border-radius: 50%;
   position: absolute;
   z-index: 10;
@@ -126,6 +126,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/*Анимации*/
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0px var(--shadow-color), 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -143,7 +144,40 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-@media (max-width: 768px) {
+
+/*Адаптив*/
+@media (max-width: 1205px) {
+  .photoBox {
+    width: min(400px, 80vw);
+    height: min(400px, 80vw);
+    order: 1;
+  }
+
+  .photoWrapper {
+    width: min(380px, 75vw);
+    height: min(380px, 75vw);
+  }
+  .description {
+    text-align: justify;
+  }
+}
+@media (max-width: 1024px) {
+  .photoBox {
+    width: min(330px, 75vw);
+    height: min(330px, 75vw);
+    order: 1;
+  }
+
+  .photoWrapper {
+    width: min(310px, 70vw);
+    height: min(310px, 70vw);
+  }
+  .aboutInfo {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 834px) {
   .wrapper {
     flex-direction: column;
     justify-content: center;
@@ -155,6 +189,7 @@
     max-width: 100%;
     order: 2;
     text-align: center;
+    min-width: 500px;
   }
 
   .photoBox {
@@ -171,7 +206,10 @@
   .title {
     font-size: 2.2rem;
   }
-
+  .buttonsWrapper {
+    width: 70%;
+    align-self: center;
+  }
   .button {
     align-self: center;
   }
@@ -188,22 +226,50 @@
     height: min(230px, 70vw);
   }
 
-  .title {
-    font-size: 1.8rem;
+  .aboutInfo {
+    max-width: 100%;
+    min-width: 300px;
+    order: 2;
+    text-align: center;
   }
-
+  .buttonsWrapper {
+    width: 100%;
+  }
   .description {
     font-size: var(--text-primary-size);
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .photoBox::after,
-  .photoBox::before {
-    animation: none;
+
+@media (orientation: portrait) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
   }
-}
-@media (max-width: 768px) {
+
   .aboutInfo {
-    padding: 0 15px; /* Боковые отступы для текста */
+    max-width: 80%;
+    order: 2;
+    text-align: center;
+  }
+
+  .photoBox {
+    order: 1;
+    width: min(500px, 80vw);
+    height: min(500px, 80vw);
+  }
+
+  .photoWrapper {
+    width: min(480px, 75vw);
+    height: min(480px, 75vw);
+  }
+
+  .buttonsWrapper {
+    max-width: 100%;
+    align-self: center;
+    gap: 10px;
   }
 }

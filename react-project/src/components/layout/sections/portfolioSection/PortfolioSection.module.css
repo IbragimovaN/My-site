@@ -3,11 +3,11 @@
 }
 .overlay {
   background: var(--bg-secondary);
-  padding: 80px 20px 0 20px;
+  padding: 5rem 20px 10px 20px;
 }
 .container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }

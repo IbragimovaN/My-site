@@ -14,8 +14,10 @@ export const ExperienceSection = ({ id }: SectionProp) => {
               <div className={styles.infoItem}>
                 <div>{item.date}</div>
                 <h4> {item.school}</h4>
-                {item.name && <h3> {item.name}</h3>}
-                <p>{item.descr}</p>
+                {item.name && (
+                  <h3 className={styles.courseName}> {item.name}</h3>
+                )}
+                <p className={styles.descr}>{item.descr}</p>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
