@@ -9,6 +9,12 @@ export const Header = () => {
   const activeSection = useActiveSection();
   const [burgerMenuOpen, setBurgerMenuOpen] = useState<boolean>(false);
 
+  const handleNavItemClick = () => {
+    if (burgerMenuOpen) {
+      setBurgerMenuOpen(false);
+    }
+  };
+
   return (
     <header className={styles.header}>
       <nav>
@@ -22,7 +28,9 @@ export const Header = () => {
               key={id}
               className={activeSection === id ? styles.active : styles.link}
             >
-              <a href={`#${id}`}>{navTitle}</a>
+              <a href={`#${id}`} onClick={handleNavItemClick}>
+                {navTitle}
+              </a>
             </li>
           ))}
         </ul>
