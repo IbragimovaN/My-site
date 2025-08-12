@@ -1,4 +1,4 @@
-# Notes App (PWA)
+# My site
 
 ## Описание проекта
 
@@ -23,7 +23,7 @@
 
 ## Сайт в интернете
 
-[Текст ссылки](https://ibragimova.site)
+[ibragimova.site](https://ibragimova.site)
 
 ## Скриншоты интерфейса
 
