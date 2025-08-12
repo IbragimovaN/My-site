@@ -75,6 +75,6 @@ export const PORTFOLIO_DATA: PortfolioDataType[] = [
     id: 10,
     title: "My site",
     image: mySiteImage,
-    link: "https://github.com/IbragimovaN/My-site/blob/main/README.md",
+    link: "https://github.com/IbragimovaN/My-site/blob/master/README.md",
   },
 ];
