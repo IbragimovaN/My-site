@@ -8,14 +8,14 @@ export const CONTACTS_DATA = [
     icon: <PhoneIcon />,
     title: "Телефон",
     value: "+79150908372",
-    link: "+79150908372",
+    link: "tel:+79150908372",
   },
   {
     id: 2,
     icon: <EmailIcon />,
     title: "Email",
     value: "anastasiya.ibr@mail.ru",
-    link: "anastasiya.ibr@mail.ru",
+    link: "mailto:anastasiya.ibr@mail.ru",
   },
   {
     id: 3,
