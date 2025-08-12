@@ -1,0 +1,13 @@
+.buttonLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--text-primary-size);
+  height: 40px;
+  width: 15rem;
+}

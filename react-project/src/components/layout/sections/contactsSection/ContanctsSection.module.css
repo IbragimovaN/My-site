@@ -1,0 +1,99 @@
+.wrapper {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info {
+  flex: 1;
+  padding-top: 40px;
+}
+
+.contactsTitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+}
+
+.contactContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.svgIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--accent-color);
+}
+
+.svgIcon svg {
+  width: 24px;
+  height: 24px;
+  fill: #5ab3f0;
+}
+
+.contactTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contactLink {
+  font-size: var(--text-primary-size);
+  color: var(--text-secondary);
+  transition: color var(--transition-duration);
+}
+
+.contactLink:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-bottom: 40px;
+  }
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info {
+    padding-top: 0;
+  }
+
+  .contactContent {
+    gap: 15px;
+  }
+
+  .svgIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contactsTitle {
+    text-align: center;
+  }
+}

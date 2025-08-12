@@ -1,0 +1,19 @@
+.wrapper {
+  padding-top: 0;
+}
+.overlay {
+  background: var(--bg-secondary);
+  padding: 5rem 20px 10px 20px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  .container {
+    justify-content: center;
+  }
+}

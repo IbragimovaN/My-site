@@ -1,0 +1,23 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: none;
+  color: var(--text-primary);
+  padding: 0;
+  width: 8rem;
+}
+
+.toggle:hover {
+  color: var(--text-secondary);
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.text {
+  font-size: var(--text-primary-size);
+}
