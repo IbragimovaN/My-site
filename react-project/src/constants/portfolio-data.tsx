@@ -7,6 +7,7 @@ import pulseImage from "@assets/images/porfolioScreens/pulse.png";
 import todoImage from "@assets/images/porfolioScreens/todo.png";
 import notesImage from "@assets/images/porfolioScreens/notes.png";
 import eventsImage from "@assets/images/porfolioScreens/events.png";
+import mySiteImage from "@assets/images/porfolioScreens/my-site.png";
 
 export interface PortfolioDataType {
   id: number;
@@ -69,5 +70,11 @@ export const PORTFOLIO_DATA: PortfolioDataType[] = [
     title: "Events",
     image: eventsImage,
     link: "https://github.com/IbragimovaN/Events/blob/main/README.md",
+  },
+  {
+    id: 10,
+    title: "My site",
+    image: mySiteImage,
+    link: "https://github.com/IbragimovaN/My-site/blob/main/README.md",
   },
 ];
