@@ -52,7 +52,7 @@
 .svgIcon svg {
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  fill: #5ab3f0;
 }
 
 .contactTitle {
@@ -72,6 +72,9 @@
 }
 
 @media (max-width: 768px) {
+  .wrapper {
+    margin-bottom: 40px;
+  }
   .content {
     flex-direction: column;
     gap: 30px;
